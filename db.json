@@ -1,0 +1,9 @@
+{
+    "cardTester": [
+        {"id": 0, "cardName": "Tristan Hawes", "Author": "Tristan Hawes"}
+    ],
+    "options": [
+        {"title": "Menu"}
+    ],
+    "profile": {"name": "Your Collection"}
+}
