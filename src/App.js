@@ -1,14 +1,12 @@
-import logo from './logo.svg';
+import CardDatabase from './components/CardDatabase';
 import React from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       {/* The commented text at the bottom was originally here */}
-      <header className="App-header">
-        <h1>Testing</h1>
-      </header>
+      <CardDatabase/>
     </div>
   );
 }
@@ -16,7 +14,7 @@ function App() {
 export default App;
 
 
-{/* <header className="App-header">
+/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -29,4 +27,4 @@ export default App;
         >
           Learn React
         </a>
-      </header> */}
+      </header> */
