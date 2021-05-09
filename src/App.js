@@ -10,10 +10,9 @@ const App = () => {
     <div className="App">
       {/* The commented text at the bottom was originally here */}
       <NavBar/>
-
       <Route exact path='/' component={Home}/>
       <Route exact path='/cards' component={CardDatabase}></Route>
-      <header className='App-header'>Test</header>
+      <Route exact path='/yourCards'></Route>
     </div>
   );
 }

@@ -14,7 +14,7 @@ class CardAdder extends React.Component {
     handleSubmit = (eventZ) => {
         eventZ.preventDefault()
         const {name, supertypes, types, subtypes, imageUrl} = this.state
-        fetch('http://localhost:3002/cards', {
+        fetch('https://api.magicthegathering.io/v1/cards?set=M21', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
