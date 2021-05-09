@@ -4,6 +4,7 @@ import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
+import YourCollection from './components/YourCollection';
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
       <NavBar/>
       <Route exact path='/' component={Home}/>
       <Route exact path='/cards' component={CardDatabase}></Route>
-      <Route exact path='/yourCards'></Route>
+      <Route exact path='/yourCards' component={YourCollection}></Route>
     </div>
   );
 }

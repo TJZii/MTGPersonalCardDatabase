@@ -1,128 +1,125 @@
 {
-"cards": [
-        {
-        "name": "Ugin, the Spirit Dragon",
-        "manaCost": "{8}",
-        "cmc": 8,
-        "type": "Legendary Planeswalker — Ugin",
-        "supertypes": [
+  "cards": [
+    {
+      "name": "Ugin, the Spirit Dragon",
+      "manaCost": "{8}",
+      "cmc": 8,
+      "type": "Legendary Planeswalker — Ugin",
+      "supertypes": [
         "Legendary"
-        ],
-        "types": [
+      ],
+      "types": [
         "Planeswalker"
-        ],
-        "subtypes": [
+      ],
+      "subtypes": [
         "Ugin"
-        ],
-        "rarity": "Mythic",
-        "set": "M21",
-        "setName": "Core set 2021",
-        "text": "[+2]: Ugin, the Spirit Dragon deals 3 damage to any target. [−X]: Exile each permanent with mana value X or less that's one or more colors. [−10]: You gain 7 life, draw seven cards, then put up to seven permanent cards from your hand onto the battlefield.",
-        "artist": "Raymond Swanland",
-        "number": "1",
-        "layout": "normal",
-        "multiverseid": "485324",
-        "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485324&type=card",
-        "loyalty": "7",
-        "id": "043fe0a6-9b4d-53fa-8a70-822ac47c7c1e"
-        },
-        {
-        "name": "Alpine Watchdog",
-        "manaCost": "{1}{W}",
-        "cmc": 2,
-        "colors": [
+      ],
+      "rarity": "Mythic",
+      "set": "M21",
+      "setName": "Core set 2021",
+      "text": "[+2]: Ugin, the Spirit Dragon deals 3 damage to any target. [−X]: Exile each permanent with mana value X or less that's one or more colors. [−10]: You gain 7 life, draw seven cards, then put up to seven permanent cards from your hand onto the battlefield.",
+      "artist": "Raymond Swanland",
+      "number": "1",
+      "layout": "normal",
+      "multiverseid": "485324",
+      "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485324&type=card",
+      "loyalty": "7",
+      "id": "043fe0a6-9b4d-53fa-8a70-822ac47c7c1e"
+    },
+    {
+      "name": "Alpine Watchdog",
+      "manaCost": "{1}{W}",
+      "cmc": 2,
+      "colors": [
         "White"
-        ],
-        "colorIdentity": [
+      ],
+      "colorIdentity": [
         "W"
-        ],
-        "type": "Creature — Dog",
-        "types": [
+      ],
+      "type": "Creature — Dog",
+      "types": [
         "Creature"
-        ],
-        "subtypes": [
+      ],
+      "subtypes": [
         "Dog"
-        ],
-        "rarity": "Common",
-        "set": "M21",
-        "setName": "Core set 2021",
-        "text": "Vigilance (Attacking doesn't cause this creature to tap.)",
-        "flavor": "'On the eighth day, a blizzard hit. Supplies were lost, and morale plummeted. On the ninth day, Dover found us.' —*To the Summit: A Tale of Survival*",
-        "artist": "Forrest Imel",
-        "number": "2",
-        "power": "2",
-        "toughness": "2",
-        "layout": "normal",
-        "multiverseid": "485325",
-        "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485325&type=card",
-       
-        "id": "5cb931df-3664-5562-a74d-6ee5158ab980"
-        },
-        {
-        "name": "Anointed Chorister",
-        "manaCost": "{W}",
-        "cmc": 1,
-        "colors": [
+      ],
+      "rarity": "Common",
+      "set": "M21",
+      "setName": "Core set 2021",
+      "text": "Vigilance (Attacking doesn't cause this creature to tap.)",
+      "flavor": "'On the eighth day, a blizzard hit. Supplies were lost, and morale plummeted. On the ninth day, Dover found us.' —*To the Summit: A Tale of Survival*",
+      "artist": "Forrest Imel",
+      "number": "2",
+      "power": "2",
+      "toughness": "2",
+      "layout": "normal",
+      "multiverseid": "485325",
+      "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485325&type=card",
+      "id": "5cb931df-3664-5562-a74d-6ee5158ab980"
+    },
+    {
+      "name": "Anointed Chorister",
+      "manaCost": "{W}",
+      "cmc": 1,
+      "colors": [
         "White"
-        ],
-        "colorIdentity": [
+      ],
+      "colorIdentity": [
         "W"
-        ],
-        "type": "Creature — Human Cleric",
-        "types": [
+      ],
+      "type": "Creature — Human Cleric",
+      "types": [
         "Creature"
-        ],
-        "subtypes": [
+      ],
+      "subtypes": [
         "Human",
         "Cleric"
-        ],
-        "rarity": "Common",
-        "set": "M21",
-        "setName": "Core set 2021",
-        "text": "Lifelink (Damage dealt by this creature also causes you to gain that much life.) {4}{W}: Anointed Chorister gets +3/+3 until end of turn.",
-        "flavor": "'I sing of benevolence and mercy, of golden wings bringing comfort to the meek and downtrodden.'",
-        "artist": "Bastien L. Deharme",
-        "number": "4",
-        "power": "1",
-        "toughness": "1",
-        "layout": "normal",
-        "multiverseid": "485327",
-        "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485327&type=card",
-        
-        "id": "1ce537ed-082e-5988-aa9e-87a721070ab4"
-        },
-        {
-        "name": "Basri Ket",
-        "manaCost": "{1}{W}{W}",
-        "cmc": 3,
-        "colors": [
+      ],
+      "rarity": "Common",
+      "set": "M21",
+      "setName": "Core set 2021",
+      "text": "Lifelink (Damage dealt by this creature also causes you to gain that much life.) {4}{W}: Anointed Chorister gets +3/+3 until end of turn.",
+      "flavor": "'I sing of benevolence and mercy, of golden wings bringing comfort to the meek and downtrodden.'",
+      "artist": "Bastien L. Deharme",
+      "number": "4",
+      "power": "1",
+      "toughness": "1",
+      "layout": "normal",
+      "multiverseid": "485327",
+      "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485327&type=card",
+      "id": "1ce537ed-082e-5988-aa9e-87a721070ab4"
+    },
+    {
+      "name": "Basri Ket",
+      "manaCost": "{1}{W}{W}",
+      "cmc": 3,
+      "colors": [
         "White"
-        ],
-        "colorIdentity": [
+      ],
+      "colorIdentity": [
         "W"
-        ],
-        "type": "Legendary Planeswalker — Basri",
-        "supertypes": [
+      ],
+      "type": "Legendary Planeswalker — Basri",
+      "supertypes": [
         "Legendary"
-        ],
-        "types": [
+      ],
+      "types": [
         "Planeswalker"
-        ],
-        "subtypes": [
+      ],
+      "subtypes": [
         "Basri"
-        ],
-        "rarity": "Mythic",
-        "set": "M21",
-        "setName": "Core set 2021",
-        "text": "[+1]: Put a +1/+1 counter on up to one target creature. It gains indestructible until end of turn. [−2]: Whenever one or more nontoken creatures attack this turn, create that many 1/1 white Soldier creature tokens that are tapped and attacking. [−6]: You get an emblem with 'At the beginning of combat on your turn, create a 1/1 white Soldier creature token, then put a +1/+1 counter on each creature you control.'",
-        "artist": "Kieran Yanner",
-        "number": "7",
-        "layout": "normal",
-        "multiverseid": "485330",
-        "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485330&type=card",
-        "loyalty": "3",
-        
-        "id": "7c578972-34bd-528a-80d2-f8c54ea430f7"
-        }
-]
+      ],
+      "rarity": "Mythic",
+      "set": "M21",
+      "setName": "Core set 2021",
+      "text": "[+1]: Put a +1/+1 counter on up to one target creature. It gains indestructible until end of turn. [−2]: Whenever one or more nontoken creatures attack this turn, create that many 1/1 white Soldier creature tokens that are tapped and attacking. [−6]: You get an emblem with 'At the beginning of combat on your turn, create a 1/1 white Soldier creature token, then put a +1/+1 counter on each creature you control.'",
+      "artist": "Kieran Yanner",
+      "number": "7",
+      "layout": "normal",
+      "multiverseid": "485330",
+      "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485330&type=card",
+      "loyalty": "3",
+      "id": "7c578972-34bd-528a-80d2-f8c54ea430f7"
+    }
+  ]
 }

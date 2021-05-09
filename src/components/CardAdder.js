@@ -7,14 +7,14 @@ class CardAdder extends React.Component {
         this.state = this.getInitialState()
     }
 
-    getInitialState = () => ({ name: '', supertypes: '', types: '', subtypes: '', imageUrl: ''})
+    getInitialState = () => ({ name: '', type: '', imageUrl: ''})
 
     handleChange = (eventZ, { name, value }) => this.setState({ [name]: value })
 
     handleSubmit = (eventZ) => {
         eventZ.preventDefault()
-        const {name, supertypes, types, subtypes, imageUrl} = this.state
-        fetch('https://api.magicthegathering.io/v1/cards?set=M21', {
+        const {name, type, imageUrl} = this.state
+        fetch('http://localhost:4000/cards', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -22,20 +22,7 @@ class CardAdder extends React.Component {
             },
             body: JSON.stringify({
                 name,
-                stats: [
-                    {
-                        value: supertypes,
-                        name: 'supertypes'
-                    },
-                    {
-                        value: types,
-                        name: 'types'
-                    },
-                    {
-                        value: subtypes,
-                        name: 'subtypes'
-                    }
-                ],
+                type,
                 imageUrl
             })
         })
@@ -46,7 +33,7 @@ class CardAdder extends React.Component {
     }
 
     render() {
-        const {name, supertypes, types, subtypes} = this.state
+        const {name, type, imageUrl} = this.state
         const {handleChange, handleSubmit} = this
         return (
             <div>
@@ -63,26 +50,18 @@ class CardAdder extends React.Component {
                         />
                         <Form.Input
                             fluid
-                            label='Supertypes'
-                            placeholder='Supertypes'
-                            name='supertypes'
-                            value={supertypes}
+                            label='Type'
+                            placeholder='Supertype Type - Subtype'
+                            name='type'
+                            value={type}
                             onChange={handleChange}
                         />
                         <Form.Input
                             fluid
-                            label='Types'
-                            placeholder='Types'
-                            name='types'
-                            value={types}
-                            onChange={handleChange}
-                        />
-                        <Form.Input
-                            fluid
-                            label='Subtypes'
-                            placeholder='Subtypes'
-                            name='subtypes'
-                            value={subtypes}
+                            label='ImageURL'
+                            placeholder='ImageURL here'
+                            name='imageUrl'
+                            value={imageUrl}
                             onChange={handleChange}
                         />
                     </Form.Group>

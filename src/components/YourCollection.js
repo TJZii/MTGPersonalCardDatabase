@@ -1,16 +1,18 @@
 import React from 'react';
-import MagicCard from './MagicCard';
-import {Card} from 'semantic-ui-react';
+import CardAdder from './CardAdder';
 
+class YourCollection extends React.Component{
 
-
-const YourCollection = ({ cards}) => {
-    <Card.Group itemsPerRow={5}>   
-        {cards.map(card => (<MagicCard key={card.number} cardName={card.name}/>))}
-    </Card.Group>
-
-    return null;
-
+    render() {
+    return(
+        <div>
+            <br/>
+            <CardAdder addCard={this.addCard}/>
+        </div>
+        );
+    }
 }
+    
+
 
 export default YourCollection;
