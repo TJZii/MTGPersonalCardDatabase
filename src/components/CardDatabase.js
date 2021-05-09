@@ -53,7 +53,13 @@ class CardDatabase extends React.Component {
                 <Search onChange={this.handleSearchChange}/>
                 <br/>
                 <header className='App-header'>{this.state.yourCards.map((card, index) => (
-                        <h3 key={index}>{card.name}: {card.type} --- <button value={card.id} onClick={this.deleteCard}>Delete</button></h3> 
+                        <h3 key={index}>
+                            <figure>
+                                <img src={card.imageUrl} alt={card.name} className='cardImage'/>
+                                <figcaption>{card.name}: {card.type}</figcaption>
+                            </figure>
+                            <button value={card.id} onClick={this.deleteCard}>Delete</button>
+                            </h3> 
                 ))}</header>
             </div>
         )
