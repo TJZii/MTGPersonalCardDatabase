@@ -29,8 +29,9 @@ class CardAdder extends React.Component {
         })
             .then(resp => resp.json())
             .catch(error => console.error(error))
+            alert(`${this.state.name} has been added! To see your card, please return to the 'Cards' tab.`);
         this.setState(this.getInitialState())
-        window.location.reload(false);
+        
     }
 
     render() {
@@ -39,6 +40,7 @@ class CardAdder extends React.Component {
         return (
             <div>
                 <h3>Add a card to your Collection!</h3>
+                <p>The type should be formatted as 'Supertype Type - Subtype' (Supertype, the hyphen, and subtype may not be needed depending on your card types)</p>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group widths='equal'>
                         <Form.Input

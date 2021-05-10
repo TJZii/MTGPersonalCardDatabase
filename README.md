@@ -1,3 +1,48 @@
+# My MTG Card Library App
+
+Magic the Gathering has a great many cards, and I own a ton of them. \
+I was trying to think of a way to better organize my library of cards, and decided to go digital.
+
+## How to Open/Start
+
+In order to see or use this Library for yourself, you will first need to clone or download the whole thing from Github.\
+
+Once you have the code, you will need to enter 2 different things into 2 seperate terminals. \
+In one terminal you will need to run:
+### `json-server --watch -p 4000 db.json`
+The reason for this is so that the app can Read, Add to, and Delete from the \
+internal API.\
+
+In the second terminal you will need to run:
+### `npm start`
+This is so that you can actually start the app itself. \
+The app should open itself, but if not, you will be able to open it at the address of: \
+[HTTP://localhost:3000/](http://localhost:3000)
+
+
+## Home
+
+Home is just the landing page of my app, and has basic instructions on it to help guide you.
+
+## Cards
+
+The cards tab shows a list of all the cards you added into your collection.\
+It also has a search bar to help you look through for specific cards. \
+
+Below each card in the list is a delete button that will allow you to remove the card it is below.
+
+## Add Card
+
+The Add Card page allows users to implement their own collection by typing the name, card type, and providing an image URL.\
+
+In the future I plan to add a preview of a just added card with a delete button, so you can see what you added and remove it if you made a mistake.
+
+
+## Conclusion
+Thank you for checking out my app for React!  This has been Tristan Hawes, thank you for your time.
+
+Below is the initial README I had from using Create React App, many thanks to them!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
