@@ -1,5 +1,6 @@
 import React from 'react';
 import Search from './Search';
+import CardsList from './CardsList';
 // import YourCollection from './YourCollection';
 
 class CardDatabase extends React.Component {
@@ -8,12 +9,14 @@ class CardDatabase extends React.Component {
         super()
         this.state = {
             yourCards: [{}],
-            searchTerm: ''
+            searchTerm: '',
+            renderTrigger: ''
         }
     }
 
     handleSearchChange = (event) => {
         this.setState({searchTerm: event.target.value})
+        console.log(`${this.state.searchTerm}`);
     }
 
     toggleImage = (cards) => {
@@ -34,7 +37,9 @@ class CardDatabase extends React.Component {
 
     deleteCard = (deleter) => {
 
-        console.log(deleter.target.value)
+        window.location.reload(false);
+
+        this.setState({renderTrigger: ''})
 
         fetch(`http://localhost:4000/cards/${deleter.target.value}`, {
          method: 'DELETE',
@@ -44,7 +49,10 @@ class CardDatabase extends React.Component {
     }
 
     render() {
-        console.log(this.state.yourCards)
+
+        const desiredCard = this.state.yourCards.filter(p =>
+            p.name && p.name.includes(this.state.searchTerm) 
+        )
 
         return (
             <div>
@@ -52,15 +60,7 @@ class CardDatabase extends React.Component {
                 <br/>
                 <Search onChange={this.handleSearchChange}/>
                 <br/>
-                <header className='App-header'>{this.state.yourCards.map((card, index) => (
-                        <h3 key={index}>
-                            <figure>
-                                <img src={card.imageUrl} alt={card.name} className='cardImage'/>
-                                <figcaption>{card.name}: {card.type}</figcaption>
-                            </figure>
-                            <button value={card.id} onClick={this.deleteCard}>Delete</button>
-                            </h3> 
-                ))}</header>
+                <CardsList cards={desiredCard} yourCards={this.state.yourCards} deleteCard={this.deleteCard}/>
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import CardAdder from './CardAdder';
 
+
 class YourCollection extends React.Component{
 
     constructor() {
@@ -10,19 +11,25 @@ class YourCollection extends React.Component{
         }
     }
 
+    deleteCard = (deleter) => {
+
+        console.log(deleter.target.value)
+
+        this.setState({renderTrigger: ''})
+
+        fetch(`http://localhost:4000/cards/${deleter.target.value}`, {
+         method: 'DELETE',
+        })
+        .then(res => res.text()) // or res.json()
+        .then(res => console.log(res))
+    }
+
     render() {
     return(
         <div>
             <br/>
             <CardAdder addCard={this.addCard}/>
-            <header className='App-header'>{this.state.yourCards.map((card, index) => (
-                        <h3 key={index}>
-                            <figure>
-                                <img src={card.imageUrl} alt={card.name} className='cardImage'/>
-                                <figcaption>{card.name}: {card.type}</figcaption>
-                            </figure>
-                        </h3> 
-                ))}</header>
+            <img src='https://strategy.channelfireball.com/wp-content/uploads/2020/10/KaladeshRemastered1024.jpg' alt='The Forge'/>
         </div>
         );
     }

@@ -7,13 +7,14 @@ class CardAdder extends React.Component {
         this.state = this.getInitialState()
     }
 
-    getInitialState = () => ({ name: '', type: '', imageUrl: ''})
+    getInitialState = () => ({ name: '', type: '', imageUrl: '', addedCard: ''})
 
     handleChange = (eventZ, { name, value }) => this.setState({ [name]: value })
 
     handleSubmit = (eventZ) => {
+
         eventZ.preventDefault()
-        const {name, type, imageUrl} = this.state
+        const {name, type, imageUrl} = this.state;
         fetch('http://localhost:4000/cards', {
             method: 'POST',
             headers: {
@@ -27,9 +28,9 @@ class CardAdder extends React.Component {
             })
         })
             .then(resp => resp.json())
-            .then(cards => this.props.addCard(cards))
             .catch(error => console.error(error))
         this.setState(this.getInitialState())
+        window.location.reload(false);
     }
 
     render() {
@@ -67,6 +68,12 @@ class CardAdder extends React.Component {
                     </Form.Group>
                     <Form.Button onClick={handleSubmit}>Submit</Form.Button>
                 </Form>
+                <h3>
+                    <figure>
+                        <img src='' alt='' id='newCard'/>
+                        <figcaption id='newCap'></figcaption>
+                    </figure>
+                </h3>
             </div>
         )
     }

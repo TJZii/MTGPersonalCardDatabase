@@ -120,6 +120,12 @@
       "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485330&type=card",
       "loyalty": "3",
       "id": "7c578972-34bd-528a-80d2-f8c54ea430f7"
+    },
+    {
+      "name": "Carreaux, Wings of Liberty",
+      "type": "Legendary Creature - Azra Soldier",
+      "imageUrl": "https://cdn.discordapp.com/attachments/532040351477923860/623111582251089960/CarreauxCard.PNG",
+      "id": "4Q68M4R"
     }
   ]
 }
