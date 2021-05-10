@@ -5,6 +5,9 @@ const Home = () => {
     return (
         <div>
             <h1>Welcome to My MTG Card Collection Tracker!</h1>
+            <p>This site lets you look at your current collection of cards, (I start you off with 5 from my own collection, including one custom). </p>
+            <p>The links to the other pages can be found at the bottom of this page. </p>
+            <p>The 'Cards' link will display the cards, as well as a search bar, and the 'Add Card' link will let you add your own!</p>
 
             <h3>Please make sure you also have entered "json-server --watch -p 4000 db.json" into your command line.</h3>
             <h3>This enables the other two pages and lets them work how they are meant too. Enjoy!</h3>

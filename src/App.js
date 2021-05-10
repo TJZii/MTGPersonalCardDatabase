@@ -10,8 +10,9 @@ const App = () => {
   return (
     <div className="App">
       {/* The commented text at the bottom was originally here */}
-      <NavBar/>
+      
       <Route exact path='/' component={Home}/>
+      <NavBar/>
       <Route exact path='/cards' component={CardDatabase}></Route>
       <Route exact path='/yourCards' component={YourCollection}></Route>
     </div>
