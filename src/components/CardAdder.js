@@ -1,5 +1,6 @@
 import React from 'react';
 import {Form} from 'semantic-ui-react';
+import CardsList from './CardsList';
 
 class CardAdder extends React.Component {
     constructor() {
@@ -7,7 +8,26 @@ class CardAdder extends React.Component {
         this.state = this.getInitialState()
     }
 
-    getInitialState = () => ({ name: '', type: '', imageUrl: '', addedCard: ''})
+    getInitialState = () => ({ 
+        name: '', 
+        type: '', 
+        imageUrl: '', 
+        addedCard: [], 
+        yourCards: []
+    })
+
+    fetchMeNewCard = (here) => (
+        fetch(`http://localhost:4000/cards?name=${here}`)
+            .then(resp => resp.json())
+            .catch(eventZ => console.error(eventZ))
+            .then((cardBase) => {
+                console.log(cardBase)
+                this.setState({
+                    addedCard: cardBase
+                })
+                console.log(this.state.addedCard)
+            })
+    )
 
     handleChange = (eventZ, { name, value }) => this.setState({ [name]: value })
 
@@ -29,13 +49,27 @@ class CardAdder extends React.Component {
         })
             .then(resp => resp.json())
             .catch(error => console.error(error))
-            alert(`${this.state.name} has been added! To see your card, please return to the 'Cards' tab.`);
-        this.setState(this.getInitialState())
+            .then(alert(`${this.state.name} has been added!`))
+            .then(this.fetchMeNewCard(this.state.name))
+        this.setState({ name: '', type: '', imageUrl: ''})
         
+    }
+
+    deleteCard = (deleter) => {
+        
+        fetch(`http://localhost:4000/cards/${deleter.target.value}`, {
+         method: 'DELETE',
+        })
+        .then(res => res.text())
+        .then(res => console.log(res))
+        .then(alert(`${this.state.name} has been removed.`))
+        console.log(this.state)
+        this.setState({addedCard: []})
     }
 
     render() {
         const {name, type, imageUrl} = this.state
+        const newestCard = this.state.addedCard;
         const {handleChange, handleSubmit} = this
         return (
             <div>
@@ -71,15 +105,11 @@ class CardAdder extends React.Component {
                     <Form.Button onClick={handleSubmit}>Submit</Form.Button>
                 </Form>
                 <h3>
-                    <figure>
-                        <img src='' alt='' id='newCard'/>
-                        <figcaption id='newCap'></figcaption>
-                    </figure>
+                <CardsList cards={newestCard} yourCards={this.state.addedCard} deleteCard={this.deleteCard}/>
                 </h3>
             </div>
         )
     }
-
 }
 
 export default CardAdder;

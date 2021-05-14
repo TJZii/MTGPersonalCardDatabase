@@ -8,7 +8,7 @@ class CardDatabase extends React.Component {
     constructor() {
         super()
         this.state = {
-            yourCards: [{}],
+            yourCards: [],
             searchTerm: '',
             renderTrigger: ''
         }
@@ -19,39 +19,21 @@ class CardDatabase extends React.Component {
         console.log(`${this.state.searchTerm}`);
     }
 
-    toggleImage = (cards) => {
-        const colle = this.state.yourCollection
-        const i = colle.indexOf(cards)
-        this.setState({
-            yourCollection: [
-                ...colle.slice(0, i),
-                {...cards, isClicked: !cards.isClicked},
-                colle.slice(i + 1)
-            ]
-        })
-    }
-
-    addCard = (cards) => {
-        this.setState({yourCollection: [...this.state.yourCollection, cards]})
-    }
-
     deleteCard = (deleter) => {
-
-        window.location.reload(false);
-
-        this.setState({renderTrigger: ''})
-
+        
         fetch(`http://localhost:4000/cards/${deleter.target.value}`, {
          method: 'DELETE',
         })
-        .then(res => res.text()) // or res.json()
+        .then(res => res.text())
         .then(res => console.log(res))
+        console.log(this.state)
+        this.setState({yourCards: this.state.yourCards.filter(card => card.id !== deleter.target.value)})
     }
 
     render() {
 
         const desiredCard = this.state.yourCards.filter(p =>
-            p.name && p.name.includes(this.state.searchTerm) 
+            p.name.includes(this.state.searchTerm) 
         )
 
         return (
@@ -75,7 +57,6 @@ class CardDatabase extends React.Component {
                   yourCards: cardBase
               })
               console.log(this.state.yourCards)
-              console.log('hi')
             })
           
     }

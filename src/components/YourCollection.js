@@ -20,7 +20,7 @@ class YourCollection extends React.Component{
         fetch(`http://localhost:4000/cards/${deleter.target.value}`, {
          method: 'DELETE',
         })
-        .then(res => res.text()) // or res.json()
+        .then(res => res.text())
         .then(res => console.log(res))
     }
 

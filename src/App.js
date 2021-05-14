@@ -9,10 +9,9 @@ import YourCollection from './components/YourCollection';
 const App = () => {
   return (
     <div className="App">
-      {/* The commented text at the bottom was originally here */}
       
-      <Route exact path='/' component={Home}/>
       <NavBar/>
+      <Route exact path='/' component={Home}/>
       <Route exact path='/cards' component={CardDatabase}></Route>
       <Route exact path='/yourCards' component={YourCollection}></Route>
     </div>
@@ -20,19 +19,3 @@ const App = () => {
 }
 
 export default App;
-
-
-/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */

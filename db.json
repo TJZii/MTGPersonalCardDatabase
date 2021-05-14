@@ -90,38 +90,6 @@
       "id": "1ce537ed-082e-5988-aa9e-87a721070ab4"
     },
     {
-      "name": "Basri Ket",
-      "manaCost": "{1}{W}{W}",
-      "cmc": 3,
-      "colors": [
-        "White"
-      ],
-      "colorIdentity": [
-        "W"
-      ],
-      "type": "Legendary Planeswalker — Basri",
-      "supertypes": [
-        "Legendary"
-      ],
-      "types": [
-        "Planeswalker"
-      ],
-      "subtypes": [
-        "Basri"
-      ],
-      "rarity": "Mythic",
-      "set": "M21",
-      "setName": "Core set 2021",
-      "text": "[+1]: Put a +1/+1 counter on up to one target creature. It gains indestructible until end of turn. [−2]: Whenever one or more nontoken creatures attack this turn, create that many 1/1 white Soldier creature tokens that are tapped and attacking. [−6]: You get an emblem with 'At the beginning of combat on your turn, create a 1/1 white Soldier creature token, then put a +1/+1 counter on each creature you control.'",
-      "artist": "Kieran Yanner",
-      "number": "7",
-      "layout": "normal",
-      "multiverseid": "485330",
-      "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485330&type=card",
-      "loyalty": "3",
-      "id": "7c578972-34bd-528a-80d2-f8c54ea430f7"
-    },
-    {
       "name": "Carreaux, Wings of Liberty",
       "type": "Legendary Creature - Azra Soldier",
       "imageUrl": "https://cdn.discordapp.com/attachments/532040351477923860/623111582251089960/CarreauxCard.PNG",
