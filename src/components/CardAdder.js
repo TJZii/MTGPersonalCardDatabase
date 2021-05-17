@@ -1,6 +1,6 @@
 import React from 'react';
 import {Form} from 'semantic-ui-react';
-// import CardsList from './CardsList';
+import CardsList from './CardsList';
 
 class CardAdder extends React.Component {
     constructor() {
@@ -55,15 +55,15 @@ class CardAdder extends React.Component {
             }))
             .then((cardBase) => {
                 console.log(cardBase)
-                document.getElementById(`recentCardImg`).src = cardBase.imageUrl;
-                document.getElementById(`thisCardDelete`).value = cardBase.id;
-                document.getElementById(`recentName`).innerText = `${cardBase.name}`;
-                document.getElementById(`recentType`).innerText = `${cardBase.type}`;
+                // document.getElementById(`recentCardImg`).src = cardBase.imageUrl;
+                // document.getElementById(`thisCardDelete`).value = cardBase.id;
+                // document.getElementById(`recentName`).innerText = `${cardBase.name}`;
+                // document.getElementById(`recentType`).innerText = `${cardBase.type}`;
 
-                // this.setState({
-                //     addedCard: cardBase
-                // })
-                // console.log(this.state.addedCard)
+                this.setState({
+                    addedCard: [cardBase]
+                })
+                console.log(this.state.addedCard)
             })
             // .then(alert(`${this.state.name} has been added!`))
             //.then(this.fetchMeNewCard(this.state))
@@ -79,17 +79,18 @@ class CardAdder extends React.Component {
         })
         .then(res => res.text())
         .then(res => console.log(res))
-        .then(() => {
-            document.getElementById(`recentCardImg`).src = '';
-            document.getElementById(`thisCardDelete`).value = '';
-            document.getElementById(`recentName`).innerText = 'The most recently added Card';
-            document.getElementById(`recentType`).innerText = 'will be displayed here.';
-        })
+        this.setState({yourCards: this.state.addedCard.filter(card => card.id !== deleter.target.value)})
+        // .then(() => {
+        //     document.getElementById(`recentCardImg`).src = '';
+        //     document.getElementById(`thisCardDelete`).value = '';
+        //     document.getElementById(`recentName`).innerText = 'The most recently added Card';
+        //     document.getElementById(`recentType`).innerText = 'will be displayed here.';
+        // })
     }
 
     render() {
         const {name, type, imageUrl} = this.state
-        // const newestCard = this.state.addedCard;
+        const newestCard = this.state.addedCard;
         const {handleChange, handleSubmit} = this
         return (
             <div>
@@ -125,7 +126,7 @@ class CardAdder extends React.Component {
                     <Form.Button onClick={handleSubmit}>Submit</Form.Button>
                 </Form>
                 <h3>
-                    <header className='App-header'>
+                    {/* <header className='App-header'>
                         <h3>
                             <figure>
                                 <img src='' alt='' className='cardImage' id='recentCardImg'/>
@@ -133,8 +134,8 @@ class CardAdder extends React.Component {
                             </figure>
                             <button id='thisCardDelete' value='' onClick={this.deleteCard}>Delete Card</button>
                         </h3> 
-                    </header>
-                {/* <CardsList cards={newestCard} yourCards={this.state.addedCard} deleteCard={this.deleteCard}/> */}
+                    </header> */}
+                <CardsList cards={newestCard} yourCards={this.state.addedCard} deleteCard={this.deleteCard}/>
                 </h3>
             </div>
         )

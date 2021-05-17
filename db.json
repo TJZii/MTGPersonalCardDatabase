@@ -94,6 +94,24 @@
       "type": "Legendary Creature - Azra Soldier",
       "imageUrl": "https://cdn.discordapp.com/attachments/532040351477923860/623111582251089960/CarreauxCard.PNG",
       "id": "4Q68M4R"
+    },
+    {
+      "name": "Ziitania",
+      "type": "Legendary Creature -- Human",
+      "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485330&type=card",
+      "id": "PCA0Ywl"
+    },
+    {
+      "name": "Uno",
+      "type": "Legendary Creature -- Human",
+      "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485330&type=card",
+      "id": "bilQWcr"
+    },
+    {
+      "name": "Uno",
+      "type": "Legendary Creature -- Human",
+      "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=485330&type=card",
+      "id": "xTKiP3Z"
     }
   ]
 }
